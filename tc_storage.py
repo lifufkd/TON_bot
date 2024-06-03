@@ -1,5 +1,5 @@
 from pytonconnect.storage import IStorage
-import redis.asyncio as redis
+# import redis.asyncio as redis
 
 # Версия с сохранением сессий пользователей после выключения (необходим сервер Redis)
 # client = redis.Redis(host='localhost', port=6379)

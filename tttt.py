@@ -79,7 +79,7 @@ async def main():
         wallets = str()
         for index, wallet in enumerate(wallets_list):
             wallets += f'{index} {wallet["name"]}\n'
-        wallet_address, balance = await connect_wallet(wallets_list[int(input(f'Выберите мост для подключения:\n\n{wallets}'))]["name"])
+        wallet_address, balance = await connect_wallet(wallets_list[1]["name"])
         return wallet_address, balance
 
 
