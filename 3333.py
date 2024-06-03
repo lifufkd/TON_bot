@@ -228,7 +228,7 @@ def main(page):
             ),
         padding=10,
         border_radius=10,
-        width=250
+        width=270
     )
 
     # Assemble the layout
@@ -237,6 +237,8 @@ def main(page):
         alignment=ft.MainAxisAlignment.CENTER,
         controls=[
             ft.Container(
+                padding=10,
+                border_radius=10,
                 bgcolor=ft.colors.GREY_200,
                 content=
                     ft.Column(
@@ -259,22 +261,8 @@ def main(page):
         expand=True,
     )
 
-    # Add centered container to the page
-    background_image = ft.Image(
-        src="les.jpg",
-    )
-
-    # Stack background image with the content
-    stack = ft.Stack(
-        controls=[
-            background_image,
-            centered_container
-        ],
-        expand=True
-    )
-
     # Add stack to the page
-    page.add(stack)
+    page.add(centered_container)
 
 
 if __name__ == '__main__':
@@ -282,4 +270,4 @@ if __name__ == '__main__':
     wallet_address = 'not connected'
     disconnect_button = None
     switch = False
-    ft.app(target=main, view=ft.WEB_BROWSER)
+    ft.app(target=main)
